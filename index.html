@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>정율사관 OT & 수강규정 안내 — 첫 등원 전 반드시 필독</title>
+<meta name="description" content="정율사관학원 종합반 신입생 안내. 등원 절차·시설·필수 앱·수강규정·환불규정·혜택 총정리. 첫 등원 전 반드시 확인하세요.">
+<meta name="theme-color" content="#0d0f3a">
+
+<meta property="og:title" content="정율사관 OT & 수강규정 안내 — 첫 등원 전 반드시 필독">
+<meta property="og:description" content="정율사관학원 종합반 신입생을 위한 OT 자료. 시설 안내·필수 앱·수강규정·혜택 총정리.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* OT 페이지 전용 보완 스타일 */
+  .ot-badge {
+    display: inline-block;
+    background: rgba(201,168,76,.15); border: 1px solid rgba(201,168,76,.4);
+    color: var(--gold); font-family: var(--font-mono); font-size: 11px;
+    letter-spacing: .18em; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 40px; margin-bottom: 24px;
+  }
+  /* 섹션 헤더 공통 */
+  .sec-head { margin-bottom: 56px; }
+  .sec-head h2 { font-family: var(--font-heading); font-size: clamp(26px, 3.2vw, 42px); font-weight: 900; line-height: 1.25; color: var(--navy); word-break: keep-all; }
+  .sec-head.light h2 { color: var(--white); }
+  .sec-head p  { font-size: 15px; color: var(--ink-500); margin-top: 14px; line-height: 1.8; }
+  .sec-head.light p { color: rgba(255,255,255,.6); }
+  /* 섹션 번호 칩 */
+  .sec-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--gold); color: var(--navy);
+    font-family: var(--font-heading); font-size: 14px; font-weight: 900;
+    margin-bottom: 20px; flex-shrink: 0;
+  }
+  .sec-num-row { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .sec-num-row h3 { font-family: var(--font-heading); font-size: clamp(18px,2vw,24px); font-weight: 800; color: var(--navy); }
+  /* 안내 카드 그리드 */
+  .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .info-card {
+    background: var(--ink-50); border: 1px solid var(--ink-100);
+    border-radius: var(--r); padding: 32px 28px;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .info-card:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(13,15,58,.09); }
+  .info-card.dark {
+    background: var(--navy); border-color: rgba(255,255,255,.08);
+  }
+  .info-card-icon { font-size: 22px; margin-bottom: 14px; }
+  .info-card h4 { font-size: 16px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+  .info-card.dark h4 { color: var(--white); }
+  .info-card p { font-size: 14px; color: var(--ink-600); line-height: 1.9; }
+  .info-card.dark p { color: rgba(255,255,255,.6); }
+  .info-card ul { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+  .info-card li { font-size: 13px; color: var(--ink-700); padding-left: 14px; position: relative; }
+  .info-card li::before { content: '·'; position: absolute; left: 0; color: var(--gold); }
+  .info-card.dark li { color: rgba(255,255,255,.75); }
+  .info-card.dark li::before { color: var(--gold); }
+  /* 시간표 */
+  .time-table {
+    border-radius: var(--r); overflow: hidden;
+    border: 1px solid rgba(255,255,255,.08);
+  }
+  .tt-row { display: grid; grid-template-columns: 140px 1fr 1fr 80px; }
+  .tt-row > div { padding: 16px 20px; font-size: 14px; color: rgba(255,255,255,.8); border-bottom: 1px solid rgba(255,255,255,.06); }
+  .tt-head > div { background: rgba(255,255,255,.06); font-family: var(--font-mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.4); }
+  .tt-grade { font-weight: 700; }
+  .tt-g1 .tt-grade { color: #a8d8a8; }
+  .tt-g2 .tt-grade { color: #a8c8ff; }
+  .tt-g3 .tt-grade { color: var(--gold); }
+  .tt-g3 > div { background: rgba(201,168,76,.05); }
+  /* 시설 맵 카드 */
+  .floor-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .floor-card {
+    background: var(--navy); border: 1px solid rgba(255,255,255,.1);
+    border-radius: var(--r); padding: 32px 28px;
+  }
+  .floor-badge {
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: .18em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 14px;
+  }
+  .floor-card h3 { font-family: var(--font-heading); font-size: 20px; font-weight: 800; color: var(--white); margin-bottom: 20px; }
+  .floor-list { display: flex; flex-direction: column; gap: 8px; }
+  .fl-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 14px; background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.06); border-radius: var(--r-sm);
+  }
+  .fl-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+  .fl-item span { font-size: 13px; color: rgba(255,255,255,.8); }
+  /* 앱 카드 */
+  .app-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 40px; }
+  .app-card {
+    background: var(--navy); border: 1px solid rgba(255,255,255,.08);
+    border-radius: var(--r); padding: 22px 16px; text-align: center;
+  }
+  .app-icon { font-size: 28px; margin-bottom: 10px; }
+  .app-name { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+  .app-desc { font-size: 11px; color: rgba(255,255,255,.5); }
+  .app-detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .app-detail-card {
+    background: var(--white); border: 1px solid var(--ink-100);
+    border-radius: var(--r); padding: 24px 22px;
+  }
+  .app-detail-card .app-name-d { font-size: 15px; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+  .app-detail-card .app-tag { font-family: var(--font-mono); font-size: 10px; letter-spacing: .14em; color: var(--gold); margin-bottom: 12px; }
+  .app-detail-card ul { display: flex; flex-direction: column; gap: 6px; }
+  .app-detail-card li { font-size: 13px; color: var(--ink-700); padding-left: 14px; position: relative; }
+  .app-detail-card li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-size: 11px; }
+  .app-detail-card .app-note { font-size: 12px; color: var(--ink-300); margin-top: 10px; font-family: var(--font-mono); }
+  /* 생활관리 그리드 */
+  .life-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .life-card {
+    border: 1px solid var(--ink-100); border-radius: var(--r); padding: 28px 24px;
+    background: var(--white);
+  }
+  .life-card.warn {
+    border-color: rgba(201,168,76,.3); background: rgba(201,168,76,.04);
+  }
+  .life-card .lc-num { font-family: var(--font-mono); font-size: 10px; letter-spacing: .18em; color: var(--gold); margin-bottom: 10px; }
+  .life-card h4 { font-size: 17px; font-weight: 800; color: var(--navy); margin-bottom: 14px; }
+  .life-card p { font-size: 14px; color: var(--ink-600); line-height: 1.9; }
+  .life-card ul { display: flex; flex-direction: column; gap: 7px; margin-top: 12px; }
+  .life-card li { font-size: 14px; color: var(--ink-700); padding: 6px 0 6px 18px; position: relative; }
+  .life-card li::before { content: '·'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+  /* 혜택 그리드 */
+  .benefit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .benefit-card {
+    background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
+    border-radius: var(--r); padding: 28px 24px;
+    transition: border-color .2s, background .2s, transform .2s;
+  }
+  .benefit-card:hover { border-color: rgba(201,168,76,.4); background: rgba(255,255,255,.09); transform: translateY(-2px); }
+  .benefit-icon { font-size: 22px; margin-bottom: 12px; }
+  .benefit-card h4 { font-size: 15px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+  .benefit-card p { font-size: 13px; color: rgba(255,255,255,.6); line-height: 1.8; font-weight: 400; }
+  /* 벌점 테이블 */
+  .deduct-table { width: 100%; border-collapse: collapse; }
+  .deduct-table th {
+    background: var(--navy); color: var(--gold);
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+    padding: 14px 16px; text-align: left; border-bottom: 1px solid rgba(255,255,255,.1);
+  }
+  .deduct-table td {
+    padding: 11px 16px; font-size: 14px; font-weight: 500; color: var(--ink-700);
+    border-bottom: 1px solid var(--ink-100); vertical-align: top; line-height: 1.6;
+  }
+  .deduct-table tr:last-child td { border-bottom: none; }
+  .deduct-table tr:nth-child(even) td { background: var(--ink-50); }
+  .deduct-wrap { border: 1px solid var(--ink-100); border-radius: var(--r); overflow: hidden; }
+  .dt-section-title { font-family: var(--font-mono); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); padding: 10px 16px; background: rgba(201,168,76,.06); border-bottom: 1px solid var(--ink-100); }
+  /* 환불규정 / 수강규정 확장 */
+  .faq-a-xl { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+  .faq-item[data-open="true"] .faq-a-xl { max-height: 800px; }
+  .faq-a-xl .ab { padding: 0 24px 24px; font-size: 15px; font-weight: 500; color: rgba(255,255,255,.7); line-height: 2.0; }
+  .faq-a-xl .ab b { color: var(--white); font-weight: 700; }
+  .faq-a-xl .ab ul { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+  .faq-a-xl .ab li { padding-left: 16px; position: relative; }
+  .faq-a-xl .ab li::before { content: '·'; position: absolute; left: 0; color: var(--gold); }
+  /* 알림 박스 variants */
+  .notice-box {
+    background: rgba(201,168,76,.08); border: 1px solid rgba(201,168,76,.25);
+    border-left: 3px solid var(--gold);
+    border-radius: var(--r-sm); padding: 18px 22px;
+    font-size: 14px; color: rgba(255,255,255,.8); line-height: 1.8;
+  }
+  .notice-box b { color: var(--gold-light); font-weight: 700; }
+  /* iPad 안내 */
+  .ipad-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  }
+  .ipad-item {
+    background: var(--white); border: 1px solid var(--ink-100);
+    border-radius: var(--r); padding: 24px 22px;
+    display: flex; align-items: flex-start; gap: 16px;
+  }
+  .ipad-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+  .ipad-item h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .ipad-item p { font-size: 13px; color: var(--ink-500); line-height: 1.7; }
+  .ipad-price { font-family: var(--font-heading); font-size: 22px; font-weight: 900; color: var(--navy); margin: 8px 0 4px; }
+  /* 반응형 보완 */
+  @media (max-width: 900px) {
+    .info-grid { grid-template-columns: 1fr; }
+    .tt-row { grid-template-columns: 120px 1fr 1fr; }
+    .tt-row > div:last-child { display: none; }
+    .floor-cards { grid-template-columns: 1fr; }
+    .app-grid { grid-template-columns: repeat(3, 1fr); }
+    .app-detail-grid { grid-template-columns: 1fr; }
+    .life-grid { grid-template-columns: 1fr; }
+    .benefit-grid { grid-template-columns: repeat(2, 1fr); }
+    .ipad-row { grid-template-columns: 1fr; }
+    .deduct-grid-2col { grid-template-columns: 1fr !important; }
+  }
+  @media (max-width: 600px) {
+    .app-grid { grid-template-columns: repeat(2, 1fr); }
+    .benefit-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─────── NAV ─────── -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top" aria-label="정율사관학원">
+      <span class="nb-logo">정율사관학원</span>
+      <span class="pipe">|</span>
+      <span class="nb-sub">종합반 OT</span>
+    </a>
+    <div class="nav-meta">
+      <a href="#guide">신입생 안내</a>
+      <a href="#schedule">이용 안내</a>
+      <a href="#apps">필수 앱</a>
+      <a href="#rules">수강규정</a>
+      <a href="#benefits">혜택</a>
+    </div>
+    <a href="tel:032-321-9937" class="nav-cta">상담 문의 <span class="arr">→</span></a>
+  </div>
+</nav>
+
+<!-- ─────── HERO ─────── -->
+<header class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="grid-lines"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow hero-glow-2"></div>
+  </div>
+
+  <div class="hero-inner">
+    <span class="hero-kicker">
+      <span class="hk-tag"><span class="dot"></span>신입생 필독</span>
+      <span class="hk-line"></span>
+      <span class="hk-text">정율사관학원 · 종합반 오리엔테이션</span>
+    </span>
+
+    <h1 class="hero-title">
+      <span class="ht-l1">정율사관 OT &</span>
+      <span class="ht-l2">수강규정 안내</span>
+      <span class="ht-l3">첫 등원 전 반드시 필독</span>
+    </h1>
+
+    <p class="hero-sub">
+      고교학점제 대비와 수능 등급 선점으로 <b>입시를 완성하라!</b><br>
+      첫 등원일 이전에 이 안내를 반드시 숙지하고 오세요.<br>
+      궁금한 사항은 <b>032-321-9937</b>로 문의하세요.
+    </p>
+
+    <div class="hero-stats">
+      <div class="hs-block">
+        <div class="hs-num">16<span>가지</span></div>
+        <div class="hs-label">필수 안내 항목</div>
+      </div>
+      <div class="hs-divider"></div>
+      <div class="hs-block">
+        <div class="hs-num">5<span>가지</span></div>
+        <div class="hs-label">학습 필수 앱</div>
+      </div>
+      <div class="hs-divider"></div>
+      <div class="hs-block">
+        <div class="hs-num">9<span>가지</span></div>
+        <div class="hs-label">종합반 특별 혜택</div>
+      </div>
+    </div>
+
+    <div class="hero-bottom">
+      <a href="#guide" class="hero-cta">신입생 안내 확인하기 <span class="arr">↓</span></a>
+      <a href="#rules" class="hero-cta-ghost">수강규정 바로가기 <span class="arr">↓</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- ─────── INTRO STRIP ─────── -->
+<section class="intro-strip">
+  <div class="container">
+    <div class="is-grid">
+      <div class="is-item reveal">
+        <div class="is-icon">◎</div>
+        <h3>첫 등원 — 6층 안내 데스크</h3>
+        <p>첫 등원일에는 반드시 6층 안내 데스크로 와서 신입생임을 밝히고 학원 안내를 받으세요. 자리에 임의로 앉지 마세요.</p>
+      </div>
+      <div class="is-item reveal d2">
+        <div class="is-icon">⬡</div>
+        <h3>필수 앱 5가지 미리 설치</h3>
+        <p>오르조 · 클래스인 · 학원친구 · 입시내비 · 구루미 캠스터디. 첫 등원 전에 5가지 앱을 모두 설치하고 회원가입까지 완료하세요.</p>
+      </div>
+      <div class="is-item reveal d3">
+        <div class="is-icon">△</div>
+        <h3>수강규정 필독 · 보호자 서명</h3>
+        <p>입학 시 수강규정 동의서를 작성합니다. 신입상담 예약 후 보호자와 함께 방문하세요. 규정 미숙지로 인한 불이익은 책임지지 않습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────── 1. 신입생 안내 ─────── -->
+<section class="sec" id="guide" style="background: var(--ink-50);">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">01 · 신입생 안내</span>
+      <h2>첫 등원, 이렇게 시작합니다.</h2>
+      <p>첫 등원일에는 혼자 강의실이나 자습관으로 가지 마세요. 반드시 아래 순서대로 움직이세요.</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card reveal">
+        <div class="info-card-icon">🏢</div>
+        <h4>Step 1 — 6층 안내 데스크 방문</h4>
+        <p>첫 등원일에 비잔티움 건물 <b>6층 안내 데스크</b>로 와서 신입생임을 밝히고 학원 안내를 받습니다.</p>
+      </div>
+      <div class="info-card reveal d1">
+        <div class="info-card-icon">📋</div>
+        <h4>Step 2 — 오리엔테이션 안내</h4>
+        <p>안내 데스크에서 강의실 배정표·시간표·자습관 좌석 안내를 받습니다. 필수 앱 설치 여부를 점검합니다. <b>종합반 사감장의 OT</b>도 진행되므로 별도 안내에 따라 참석하세요.</p>
+      </div>
+      <div class="info-card reveal d2">
+        <div class="info-card-icon">📱</div>
+        <h4>Step 3 — 앱 설정 & 입실</h4>
+        <p>오르조·학원친구 계정 연동 후 배정 강의실로 이동합니다. 자습관 입실 전 출결 패드에 체크합니다.</p>
+      </div>
+    </div>
+
+    <div class="rule-box reveal" style="margin-top: 28px;">
+      <b>📍 위치 안내</b> — 비잔티움 4층·6층에 정율사관 시설이 있습니다. 처음 방문 시 1층 로비에서 엘리베이터를 이용하세요. 안내 데스크는 <b>6층</b>입니다.
+    </div>
+  </div>
+</section>
+
+<!-- ─────── 2. 자습관 이용 안내 (시간표) ─────── -->
+<section class="sec schedule" id="schedule">
+  <div class="container">
+    <span class="eyebrow reveal">02 · 1·3월 종합반 자습관 이용 안내 <span class="only-badge" style="display:inline-block;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.4);color:var(--gold);font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;padding:3px 10px;border-radius:40px;margin-left:10px;vertical-align:middle;">종합반 해당</span></span>
+    <h2 class="reveal d1">학년별 <em>등·하원 시간</em>을 확인하세요.</h2>
+
+    <div class="time-table reveal scale-in d2">
+      <div class="tt-row tt-head">
+        <div>학년</div>
+        <div>평일</div>
+        <div>주말 (토/일)</div>
+        <div>등원 일수</div>
+      </div>
+      <div class="tt-row tt-g1">
+        <div class="tt-grade">고1</div>
+        <div>18:30 – 22:00</div>
+        <div>토 09:00 – 19:00 / 일 자율등원</div>
+        <div>주 6일</div>
+      </div>
+      <div class="tt-row tt-g2">
+        <div class="tt-grade">고2</div>
+        <div>18:30 – 23:20</div>
+        <div>토 09:00 – 19:00 / 일 자율등원</div>
+        <div>주 6일</div>
+      </div>
+      <div class="tt-row tt-g3">
+        <div class="tt-grade">고3</div>
+        <div>18:30 – 24:20</div>
+        <div>토·일 08:00 – 19:00</div>
+        <div>주 7일</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 48px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: 16px; padding: 32px;">
+  <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">출결 체크 방법 — 등원·하원 모두 필수 (종합반)</div>
+
+  <!-- 등원 -->
+  <div style="margin-bottom: 20px;">
+    <div style="display:inline-block;background:rgba(201,168,76,.2);color:var(--gold);font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:.1em;padding:5px 14px;border-radius:40px;margin-bottom:16px;">▶ 등원 시</div>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:18px 24px;min-width:160px;text-align:center;">
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--gold);margin-bottom:8px;">STEP 1</div>
+        <div style="font-size:16px;font-weight:800;color:var(--white);margin-bottom:4px;">패드 ① 체크</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.6);">학원 출결 패드</div>
+      </div>
+      <div style="font-size:22px;color:rgba(255,255,255,.25);">→</div>
+      <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:18px 24px;min-width:160px;text-align:center;">
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--gold);margin-bottom:8px;">STEP 2</div>
+        <div style="font-size:16px;font-weight:800;color:var(--white);margin-bottom:4px;">패드 ② 체크</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.6);">자습관 출결 패드</div>
+      </div>
+      <div style="font-size:22px;color:rgba(255,255,255,.25);">→</div>
+      <div style="background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);border-radius:12px;padding:18px 24px;min-width:160px;text-align:center;">
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--gold);margin-bottom:8px;">완료</div>
+        <div style="font-size:16px;font-weight:800;color:var(--gold-light);margin-bottom:4px;">자습관 입실</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.5);">2개 모두 체크 후</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="height:1px;background:rgba(255,255,255,.08);margin-bottom:20px;"></div>
+
+  <!-- 하원 -->
+  <div style="margin-bottom: 20px;">
+    <div style="display:inline-block;background:rgba(74,108,247,.2);color:var(--accent-light);font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:.1em;padding:5px 14px;border-radius:40px;margin-bottom:16px;">◀ 하원 시</div>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+      <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:18px 24px;min-width:160px;text-align:center;">
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--gold);margin-bottom:8px;">STEP 1</div>
+        <div style="font-size:16px;font-weight:800;color:var(--white);margin-bottom:4px;">패드 ① 체크</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.6);">학원 출결 패드</div>
+      </div>
+      <div style="font-size:22px;color:rgba(255,255,255,.25);">→</div>
+      <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:18px 24px;min-width:160px;text-align:center;">
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--gold);margin-bottom:8px;">STEP 2</div>
+        <div style="font-size:16px;font-weight:800;color:var(--white);margin-bottom:4px;">패드 ② 체크</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.6);">자습관 출결 패드</div>
+      </div>
+      <div style="font-size:22px;color:rgba(255,255,255,.25);">→</div>
+      <div style="background:rgba(74,108,247,.1);border:1px solid rgba(74,108,247,.3);border-radius:12px;padding:18px 24px;min-width:160px;text-align:center;">
+        <div style="font-family:var(--font-mono);font-size:11px;color:var(--accent-light);margin-bottom:8px;">완료</div>
+        <div style="font-size:16px;font-weight:800;color:var(--accent-light);margin-bottom:4px;">퇴실·귀가</div>
+        <div style="font-size:13px;color:rgba(255,255,255,.5);">2개 모두 체크 후</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:rgba(231,76,60,.08);border:1px solid rgba(231,76,60,.2);border-left:3px solid #e74c3c;border-radius:8px;padding:14px 18px;font-size:13px;color:rgba(255,255,255,.8);margin-top:4px;">
+    ⚠ <b style="color:white;">번호: 핸드폰 뒷자리 4자리</b> — 패드 1개라도 미체크 시 결석 처리. 대리 체크는 강제퇴원 사유.
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- ─────── 3. 출결관련 사항 ─────── -->
+<section class="sec" style="background: var(--ink-50);">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">03 · 출결관련 사항 (종합반만 해당)</span>
+      <h2>출결은 <em>반드시 직접</em> 처리해야 합니다.</h2>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card reveal">
+        <div class="info-card-icon">📄</div>
+        <h4>외출 · 조퇴 · 결석 시</h4>
+        <p><b>"외출증"</b>을 작성 후 제출해야 합니다. 무단 외출·조퇴·결석은 벌점 처리됩니다. 외출증은 6층 안내 데스크에서 수령하세요.</p>
+      </div>
+      <div class="info-card reveal d1">
+        <div class="info-card-icon">💬</div>
+        <h4>사전 연락 방법</h4>
+        <p>결석·지각·조퇴 시 반드시 사전에 <b>카카오채널 '정율사관학원'</b>으로 연락하세요. 사후 연락은 인정되지 않습니다.</p>
+      </div>
+      <div class="info-card reveal d2">
+        <div class="info-card-icon">⚠️</div>
+        <h4>무단 결석 시 제재</h4>
+        <p>사전 연락 없는 무단 결석은 <b>벌점 부과</b>됩니다. 누적 벌점에 따라 보호자 연락 및 면담이 진행됩니다.</p>
+      </div>
+    </div>
+
+    <div class="rule-box reveal" style="margin-top: 28px; background: var(--white);">
+      <b>카카오채널 연락처</b> — 카카오톡에서 '정율사관학원' 채널을 친구 추가하세요. 결석·지각·외출 관련 모든 연락은 이 채널로 통합됩니다.
+    </div>
+  </div>
+</section>
+
+<!-- ─────── 4·5. 시설 안내 ─────── -->
+<section class="sec" style="background: var(--navy);">
+  <div class="container">
+    <div class="sec-head light reveal">
+      <span class="eyebrow">04·05 · 시설 안내</span>
+      <h2 style="color:var(--white);">비잔티움 <em>4층 · 6층</em> 안내</h2>
+      <p>정율사관 주요 시설은 비잔티움 건물 4층과 6층에 있습니다.</p>
+    </div>
+
+    <div class="floor-cards reveal d1">
+      <div class="floor-card">
+        <div class="floor-badge">비잔티움 4층</div>
+        <h3>자습·학습 공간</h3>
+        <div class="floor-list">
+          <div class="fl-item"><div class="fl-dot"></div><span>블랙관(420관)</span></div>
+          <div class="fl-item"><div class="fl-dot"></div><span>제1·2·3 자습관</span></div>
+          <div class="fl-item"><div class="fl-dot"></div><span>419관</span></div>
+          <div class="fl-item"><div class="fl-dot"></div><span>튜터링 공간(북카페)</span></div>
+          <div class="fl-item"><div class="fl-dot"></div><span>크로켓 카페</span></div>
+        </div>
+      </div>
+      <div class="floor-card">
+        <div class="floor-badge">비잔티움 6층</div>
+        <h3>강의 · 행정 공간</h3>
+        <div class="floor-list">
+          <div class="fl-item"><div class="fl-dot"></div><span>W1 ~ W8 강의실</span></div>
+          <div class="fl-item"><div class="fl-dot"></div><span>B1 ~ B9 강의실</span></div>
+          <div class="fl-item"><div class="fl-dot"></div><span>B2 — 약술 자습관</span></div>
+          <div class="fl-item"><div class="fl-dot"></div><span>대강당</span></div>
+          <div class="fl-item"><div class="fl-dot"></div><span>안내 데스크 (신입생 집결지)</span></div>
+          <div class="fl-item"><div class="fl-dot"></div><span>자습관 B7 ~ B9</span></div>
+          <div class="fl-item"><div class="fl-dot"></div><span>튜터링 공간</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal d2" style="margin-top: 32px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); border-radius: 16px; padding: 32px;">
+  <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">강의실 배치표 · 시간표 확인 방법</div>
+
+  <!-- 이미지 placeholder -->
+  <div style="background:rgba(255,255,255,.04);border:2px dashed rgba(201,168,76,.3);border-radius:12px;height:200px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
+    <span style="font-family:var(--font-mono);font-size:12px;color:rgba(255,255,255,.3);letter-spacing:.1em;text-align:center;">이미지를 여기에 삽입하세요<br><span style="font-size:10px;opacity:.6;">(학원친구 앱 스크린샷)</span></span>
+  </div>
+
+  <!-- 단계 설명 -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;">
+    <div style="background:rgba(255,255,255,.06);border-radius:10px;padding:16px 18px;">
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--gold);letter-spacing:.14em;margin-bottom:8px;">STEP 01</div>
+      <div style="font-size:14px;font-weight:700;color:var(--white);margin-bottom:4px;">학원친구 앱 실행</div>
+      <div style="font-size:12px;color:rgba(255,255,255,.55);">앱스토어 / 플레이스토어에서 설치 후 실행</div>
+    </div>
+    <div style="background:rgba(255,255,255,.06);border-radius:10px;padding:16px 18px;">
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--gold);letter-spacing:.14em;margin-bottom:8px;">STEP 02</div>
+      <div style="font-size:14px;font-weight:700;color:var(--white);margin-bottom:4px;">학원생활 탭 선택</div>
+      <div style="font-size:12px;color:rgba(255,255,255,.55);">하단 메뉴에서 <b style="color:var(--gold-light);">학원생활</b> 탭으로 이동</div>
+    </div>
+    <div style="background:rgba(255,255,255,.06);border-radius:10px;padding:16px 18px;">
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--gold);letter-spacing:.14em;margin-bottom:8px;">STEP 03</div>
+      <div style="font-size:14px;font-weight:700;color:var(--white);margin-bottom:4px;">배치표 / 시간표 확인</div>
+      <div style="font-size:12px;color:rgba(255,255,255,.55);">강의실 배치표 및 내 수업 시간표 열람</div>
+    </div>
+    <div style="background:rgba(255,255,255,.06);border-radius:10px;padding:16px 18px;">
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--gold);letter-spacing:.14em;margin-bottom:8px;">STEP 04</div>
+      <div style="font-size:14px;font-weight:700;color:var(--white);margin-bottom:4px;">강의실 번호 확인 후 이동</div>
+      <div style="font-size:12px;color:rgba(255,255,255,.55);">수업별 배정 강의실(W·B)을 확인하고 이동</div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- ─────── 6. INSTUDY ─────── -->
+<section class="sec" style="background: var(--white);">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">06 · INSTUDY</span>
+      <h2>인스터디 — <em>과제 점검 및 RV TEST</em></h2>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card reveal" style="grid-column: span 2;">
+        <div class="info-card-icon">📚</div>
+        <h4>인스터디(INSTUDY)란?</h4>
+        <p>수업 전후 배정된 강의실에서 <b>클래스인 앱을 켜고</b> 진행하는 과제 점검 및 RV TEST 수업입니다. 담당 강사가 과제 완료 여부를 확인하고 복습 테스트를 진행합니다.</p>
+        <ul style="margin-top: 14px;">
+          <li>배정된 강의실에서만 진행됩니다 (임의 변경 불가)</li>
+          <li>클래스인 앱을 반드시 켜고 입실해야 합니다</li>
+          <li>과제 미완료 시 벌점 및 추가 과제가 부여됩니다</li>
+        </ul>
+      </div>
+      <div class="info-card reveal d2">
+        <div class="info-card-icon">🖥️</div>
+        <h4>클래스인 사전 준비</h4>
+        <p>인스터디 참여를 위해 클래스인 앱 설치 및 수업 코드 등록을 미리 완료하세요. 미등록 시 출석 처리가 되지 않습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────── 7·8. 필수 앱 ─────── -->
+<section class="sec subjects" id="apps">
+  <div class="container">
+    <span class="eyebrow reveal">07·08 · 학습 도구 필수 앱</span>
+    <h2 class="reveal d1">5가지 앱, <em>첫 등원 전 모두 설치</em>하세요.</h2>
+    <p class="reveal d2" style="margin-bottom: 36px; color: var(--ink-500); font-size: 15px;">아래 앱들은 수업·자습·시간표·출결·순공시간 관리에 필수입니다. 첫 등원 전 설치와 회원가입을 완료하세요.</p>
+
+    <div class="app-grid" data-stagger>
+      <div class="app-card">
+        <div style="width:56px;height:56px;border-radius:14px;background:rgba(255,255,255,.08);border:1px dashed rgba(201,168,76,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+  <span style="font-size:10px;color:rgba(255,255,255,.2);font-family:var(--font-mono);">앱</span>
+</div>
+        <div class="app-name">오르조</div>
+        <div class="app-desc">과제·테스트·복습</div>
+      </div>
+      <div class="app-card">
+        <div style="width:56px;height:56px;border-radius:14px;background:rgba(255,255,255,.08);border:1px dashed rgba(201,168,76,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+  <span style="font-size:10px;color:rgba(255,255,255,.2);font-family:var(--font-mono);">앱</span>
+</div>
+        <div class="app-name">클래스인</div>
+        <div class="app-desc">인스터디 출결</div>
+      </div>
+      <div class="app-card">
+        <div style="width:56px;height:56px;border-radius:14px;background:rgba(255,255,255,.08);border:1px dashed rgba(201,168,76,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+  <span style="font-size:10px;color:rgba(255,255,255,.2);font-family:var(--font-mono);">앱</span>
+</div>
+        <div class="app-name">학원친구</div>
+        <div class="app-desc">시간표·배치표</div>
+      </div>
+      <div class="app-card">
+        <div style="width:56px;height:56px;border-radius:14px;background:rgba(255,255,255,.08);border:1px dashed rgba(201,168,76,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+  <span style="font-size:10px;color:rgba(255,255,255,.2);font-family:var(--font-mono);">앱</span>
+</div>
+        <div class="app-name">입시내비</div>
+        <div class="app-desc">입시 정보</div>
+      </div>
+      <div class="app-card">
+        <div style="width:56px;height:56px;border-radius:14px;background:rgba(255,255,255,.08);border:1px dashed rgba(201,168,76,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+  <span style="font-size:10px;color:rgba(255,255,255,.2);font-family:var(--font-mono);">앱</span>
+</div>
+        <div class="app-name">구루미 캠스터디</div>
+        <div class="app-desc">순공시간 관리</div>
+      </div>
+    </div>
+
+    <div class="app-detail-grid reveal d3" style="margin-top: 0;">
+      <div class="app-detail-card">
+        <div class="app-name-d">오르조</div>
+        <div class="app-tag">과제 · 테스트 · 복습 · 질문</div>
+        <ul>
+          <li>강사가 내는 과제 확인 및 제출</li>
+          <li>RV TEST (복습 테스트) 응시</li>
+          <li>수업 복습 자료 열람</li>
+          <li>강사에게 직접 질문 가능</li>
+        </ul>
+      </div>
+      <div class="app-detail-card">
+        <div class="app-name-d">클래스인</div>
+        <div class="app-tag">인스터디 출결</div>
+        <ul>
+          <li>인스터디 수업 시 출석 처리</li>
+          <li>강의실 내 집중도 관리</li>
+          <li>수업 자료 실시간 공유</li>
+        </ul>
+      </div>
+      <div class="app-detail-card">
+        <div class="app-name-d">학원친구</div>
+        <div class="app-tag">시간표 · 강의실 배치표</div>
+        <ul>
+          <li>학원생활 탭 → 내 시간표 확인</li>
+          <li>강의실 배치표 확인</li>
+          <li>공지사항 및 학원 소식 확인</li>
+        </ul>
+      </div>
+      <div class="app-detail-card">
+        <div class="app-name-d">구루미 캠스터디</div>
+        <div class="app-tag">순공시간 관리</div>
+        <ul>
+          <li>화상 캠으로 자습 시간 측정</li>
+          <li>순공시간 누적 기록</li>
+          <li>학부모 학습 현황 공유</li>
+        </ul>
+        <div class="app-note">※ 최초 가입비 15,000원 (종합반 지원 혜택 있음)</div>
+      </div>
+    </div>
+
+    <div class="subj-note reveal" style="margin-top: 24px;">
+      <b>앱 설치 순서 권장: 오르조 → 학원친구 → 클래스인 → 구루미 → 입시내비</b><br>
+      각 앱 가입 시 학원 코드가 필요할 수 있습니다. 코드는 6층 안내 데스크에서 받으세요.
+    </div>
+  </div>
+</section>
+
+<!-- ─────── 9. 기기 대여 ─────── -->
+<section class="sec" style="background: var(--white);">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">09 · 기기 대여 · 반납 안내</span>
+      <h2>기기 대여 — <em>아이패드 · 레노바 패드</em></h2>
+      <p>자체 디바이스가 없는 학생은 아래 기기를 대여할 수 있습니다.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;" class="reveal d1">
+  <!-- 아이패드 -->
+  <div style="border:1px solid var(--ink-100);border-radius:var(--r);padding:32px 28px;background:var(--white);">
+    <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">아이패드</div>
+    <h4 style="font-size:18px;font-weight:800;color:var(--navy);margin-bottom:20px;">iPad 대여</h4>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
+      <div style="background:var(--ink-50);border-radius:8px;padding:16px;text-align:center;">
+        <div style="font-size:12px;color:var(--ink-500);margin-bottom:6px;">보증금</div>
+        <div style="font-family:var(--font-heading);font-size:22px;font-weight:900;color:var(--navy);">150,000<span style="font-size:14px;font-weight:500;">원</span></div>
+      </div>
+      <div style="background:var(--ink-50);border-radius:8px;padding:16px;text-align:center;">
+        <div style="font-size:12px;color:var(--ink-500);margin-bottom:6px;">월 사용료</div>
+        <div style="font-family:var(--font-heading);font-size:22px;font-weight:900;color:var(--navy);">15,000<span style="font-size:14px;font-weight:500;">원</span></div>
+      </div>
+    </div>
+    <ul style="display:flex;flex-direction:column;gap:7px;">
+      <li style="font-size:13px;color:var(--ink-700);padding-left:14px;position:relative;">
+        <span style="position:absolute;left:0;color:var(--gold);">·</span>반납 시 보증금 전액 환불
+      </li>
+      <li style="font-size:13px;color:var(--ink-700);padding-left:14px;position:relative;">
+        <span style="position:absolute;left:0;color:var(--gold);">·</span>파손·분실 시 보증금에서 차감
+      </li>
+    </ul>
+  </div>
+  <!-- 레노바 패드 -->
+  <div style="border:1px solid var(--ink-100);border-radius:var(--r);padding:32px 28px;background:var(--white);">
+    <div style="font-family:var(--font-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;">레노바 패드 (구루미용)</div>
+    <h4 style="font-size:18px;font-weight:800;color:var(--navy);margin-bottom:20px;">Lenova Pad 대여</h4>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
+      <div style="background:var(--ink-50);border-radius:8px;padding:16px;text-align:center;">
+        <div style="font-size:12px;color:var(--ink-500);margin-bottom:6px;">보증금</div>
+        <div style="font-family:var(--font-heading);font-size:22px;font-weight:900;color:var(--navy);">50,000<span style="font-size:14px;font-weight:500;">원</span></div>
+      </div>
+      <div style="background:var(--ink-50);border-radius:8px;padding:16px;text-align:center;">
+        <div style="font-size:12px;color:var(--ink-500);margin-bottom:6px;">월 사용료</div>
+        <div style="font-family:var(--font-heading);font-size:22px;font-weight:900;color:var(--navy);">5,000<span style="font-size:14px;font-weight:500;">원</span></div>
+      </div>
+    </div>
+    <ul style="display:flex;flex-direction:column;gap:7px;">
+      <li style="font-size:13px;color:var(--ink-700);padding-left:14px;position:relative;">
+        <span style="position:absolute;left:0;color:var(--gold);">·</span>구루미 캠스터디 전용 기기
+      </li>
+      <li style="font-size:13px;color:var(--ink-700);padding-left:14px;position:relative;">
+        <span style="position:absolute;left:0;color:var(--gold);">·</span>반납 시 보증금 전액 환불
+      </li>
+    </ul>
+  </div>
+</div>
+
+    <div class="rule-box reveal d2" style="margin-top: 20px;">
+      기기 대여 신청은 <b>6층 안내 데스크</b>에서 가능합니다. 보증금 납부 확인 후 기기를 수령합니다.
+    </div>
+  </div>
+</section>
+
+<!-- ─────── 10·11·12. 생활관리 ─────── -->
+<section class="sec" style="background: var(--ink-50);">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">10·11·12·13 · 생활 관리 안내 <span style="display:inline-block;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.4);color:var(--gold);font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;padding:3px 10px;border-radius:40px;margin-left:10px;vertical-align:middle;">종합반 전용</span></span>
+      <h2>출석 · 휴대폰 · PM종례 · 외출증 — <em>종합반 필수 규정</em></h2>
+    </div>
+
+    <div class="life-grid">
+      <div class="life-card reveal" style="border-left: 3px solid var(--gold);">
+        <div class="lc-num">10 · 출석체크</div>
+        <h4>출결 패드 2개 입력 필수</h4>
+        <p>종합반 학생은 <b>학원 출결 패드</b>와 <b>자습관 출결 패드</b>, 2개를 모두 입력해야 출석으로 인정됩니다.</p>
+        <ul>
+          <li>번호는 핸드폰 뒷자리 4자리</li>
+          <li>1개만 입력 시 결석 처리</li>
+          <li>대리 입력은 엄격히 금지 (강제퇴원 사유)</li>
+        </ul>
+      </div>
+      <div class="life-card warn reveal d1" style="border-left: 3px solid var(--gold);">
+        <div class="lc-num">11 · 휴대폰 관리</div>
+        <h4>등원 즉시 사감에게 제출</h4>
+        <p>종합반 학생은 등원과 동시에 <b>휴대폰을 사감에게 제출</b>해야 합니다.</p>
+        <ul>
+          <li>쉬는 시간에도 휴대폰 사용 불가</li>
+          <li>귀가 시 사감에게 반환받음</li>
+          <li>미제출 시 벌점 부과</li>
+          <li>스마트워치 등 유사 기기도 동일 적용</li>
+        </ul>
+      </div>
+      <div class="life-card reveal d2" style="border-left: 3px solid var(--gold);">
+        <div class="lc-num">12 · PM 종례</div>
+        <h4>수요일 PM 종례 · 월요일 전체종례</h4>
+        <p><b>PM(Project Mentor)</b>은 담당 과목 강사 중 1명이 배정됩니다.</p>
+        <ul>
+          <li><b>매주 월요일</b> — 전체 종례 (전 종합반 학생)</li>
+          <li><b>매주 수요일</b> — 수업 후 PM 종례</li>
+          <li>학습 진도·과제·태도 점검</li>
+          <li>다음 주 학습 계획 안내</li>
+          <li>무단 불참 시 벌점</li>
+        </ul>
+      </div>
+      <div class="life-card reveal d3" style="border-left: 3px solid var(--gold);">
+        <div class="lc-num">13 · 외출증 안내</div>
+        <h4>6층 데스크 수령 · 보호자+PM/사감장 서명</h4>
+        <p>외출이 필요한 경우 <b>6층 안내 데스크</b>에서 외출증을 수령합니다.</p>
+        <ul>
+          <li>보호자 서명 + <b>PM 또는 사감장</b> 서명 필수</li>
+          <li>단기외출: 외출 1일 전 제출</li>
+          <li>정기외출: 정해진 기간 내 제출</li>
+          <li>서명 없는 외출증은 무효</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────── 13. 상벌점 기준 ─────── -->
+<section class="sec" style="background: var(--white);">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">13 · 상벌점 기준 <span style="display:inline-block;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.4);color:var(--gold);font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;padding:3px 10px;border-radius:40px;margin-left:10px;vertical-align:middle;">종합반 전용</span></span>
+      <h2>상점 · 벌점 — <em>정확히 숙지</em>하세요.</h2>
+      <p>상벌점은 매월 누적 집계됩니다. 상점은 다양한 혜택으로 환산되며, 벌점 누적 시 면담 및 퇴원 조치가 이루어집니다.</p>
+    </div>
+
+    <!-- 상점 -->
+    <div class="reveal d1" style="margin-bottom: 32px;">
+      <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--green, #2ecc71); padding: 10px 16px; background: rgba(46,204,113,.06); border: 1px solid rgba(46,204,113,.2); border-radius: var(--r) var(--r) 0 0; border-bottom: none;">
+        ＋ 상점 항목
+      </div>
+      <div class="deduct-grid-2col" style="display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--ink-100); border-radius: 0 0 var(--r) var(--r); overflow: hidden;">
+        <table class="deduct-table" style="border-right: 1px solid var(--ink-100);">
+          <tr>
+            <th>항목</th>
+            <th style="width:60px; text-align:right; color:#2ecc71;">점수</th>
+          </tr>
+          <tr><td>개근 1달</td><td style="text-align:right; font-weight:700; color:#2ecc71;">+10</td></tr>
+          <tr><td>개근 1주</td><td style="text-align:right; font-weight:700; color:#2ecc71;">+3</td></tr>
+          <tr><td>순공의 왕</td><td style="text-align:right; font-weight:700; color:#2ecc71;">+3</td></tr>
+          <tr><td>채택의 왕</td><td style="text-align:right; font-weight:700; color:#2ecc71;">+3</td></tr>
+          <tr><td>야자 참여 <span style="font-size:11px; color:var(--ink-300);">(00:30까지)</span></td><td style="text-align:right; font-weight:700; color:#2ecc71;">+2</td></tr>
+          <tr><td>조기등원 <span style="font-size:11px; color:var(--ink-300);">(30분 일찍)</span></td><td style="text-align:right; font-weight:700; color:#2ecc71;">+1</td></tr>
+        </table>
+        <table class="deduct-table">
+          <tr>
+            <th>항목</th>
+            <th style="width:60px; text-align:right; color:#2ecc71;">점수</th>
+          </tr>
+          <tr><td>칭찬포인트 10점 달성</td><td style="text-align:right; font-weight:700; color:#2ecc71;">+5</td></tr>
+          <tr><td>답변의 왕</td><td style="text-align:right; font-weight:700; color:#2ecc71;">+3</td></tr>
+          <tr><td>질문의 왕</td><td style="text-align:right; font-weight:700; color:#2ecc71;">+3</td></tr>
+          <tr><td>자습태도 우수</td><td style="text-align:right; font-weight:700; color:#2ecc71;">+2</td></tr>
+          <tr><td>야자 참여 <span style="font-size:11px; color:var(--ink-300);">(23:20 이상)</span></td><td style="text-align:right; font-weight:700; color:#2ecc71;">+1</td></tr>
+          <tr><td>칭찬포인트</td><td style="text-align:right; font-weight:700; color:#2ecc71;">+1</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 벌점 -->
+    <div class="reveal d2">
+      <div style="font-family: var(--font-mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #e74c3c; padding: 10px 16px; background: rgba(231,76,60,.06); border: 1px solid rgba(231,76,60,.2); border-radius: var(--r) var(--r) 0 0; border-bottom: none;">
+        － 벌점 항목
+      </div>
+      <div class="deduct-grid-2col" style="display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--ink-100); border-radius: 0 0 var(--r) var(--r); overflow: hidden;">
+        <table class="deduct-table" style="border-right: 1px solid var(--ink-100);">
+          <tr>
+            <th>항목</th>
+            <th style="width:60px; text-align:right; color:#e74c3c;">점수</th>
+          </tr>
+          <tr><td>학습 외 핸드폰 사용</td><td style="text-align:right; font-weight:700; color:#e74c3c;">-10</td></tr>
+          <tr><td>학습 외 전자기기 사용</td><td style="text-align:right; font-weight:700; color:#e74c3c;">-7</td></tr>
+          <tr><td>외출증 미제출로 외출</td><td style="text-align:right; font-weight:700; color:#e74c3c;">-5</td></tr>
+          <tr><td>자습시간 미준수</td><td style="text-align:right; font-weight:700; color:#e74c3c;">-5</td></tr>
+          <tr><td>핸드폰 미제출</td><td style="text-align:right; font-weight:700; color:#e74c3c;">-5</td></tr>
+          <tr><td>무단결석 → 지각수정</td><td style="text-align:right; font-weight:700; color:#e74c3c;">-4</td></tr>
+          <tr><td>엎드려 자는 행위</td><td style="text-align:right; font-weight:700; color:#e74c3c;">-3</td></tr>
+        </table>
+        <table class="deduct-table">
+          <tr>
+            <th>항목</th>
+            <th style="width:60px; text-align:right; color:#e74c3c;">점수</th>
+          </tr>
+          <tr><td>자습시간 무단외출 및 조퇴</td><td style="text-align:right; font-weight:700; color:#e74c3c;">-7</td></tr>
+          <tr><td>무단 결석</td><td style="text-align:right; font-weight:700; color:#e74c3c;">-5</td></tr>
+          <tr><td>음식물 반입, 쓰레기 방치</td><td style="text-align:right; font-weight:700; color:#e74c3c;">-5</td></tr>
+          <tr><td>잡담 및 소음</td><td style="text-align:right; font-weight:700; color:#e74c3c;">-5</td></tr>
+          <tr><td>지각 <span style="font-size:11px; color:var(--ink-300);">(20분 이상)</span> 무단지각</td><td style="text-align:right; font-weight:700; color:#e74c3c;">-4</td></tr>
+          <tr><td>출결 패드 미체크</td><td style="text-align:right; font-weight:700; color:#e74c3c;">-2</td></tr>
+          <tr><td>지각 <span style="font-size:11px; color:var(--ink-300);">(15분 이하)</span></td><td style="text-align:right; font-weight:700; color:#e74c3c;">-1</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────── 14. 수강규정 ─────── -->
+<section class="sec faq-light" id="rules" style="background:var(--ink-50);">
+  <div class="faq-inner" style="max-width: 760px;">
+    <span class="eyebrow reveal">14 · 수강규정</span>
+    <h2 class="reveal d1">수강규정 — <em>반드시 숙지</em>하세요.</h2>
+
+    <div class="faq-list">
+      <div class="faq-item" data-open="true">
+        <button class="faq-q" aria-expanded="true">
+          <span class="qn">①</span>
+          <span class="qt">신입상담</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a-xl">
+          <p class="ab">수강 신청 전 반드시 <b>신입상담</b>을 받아야 합니다. 상담은 전화(032-321-9937) 또는 직접 방문으로 예약합니다. 보호자와 함께 방문하는 것을 원칙으로 하며, 학생의 현재 학습 수준·목표·생활 패턴을 파악한 후 수강 과목과 자습관 이용 여부를 결정합니다. 상담 없이 임의로 등록한 경우 수업 배정이 불가할 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span class="qn">②</span>
+          <span class="qt">출석</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a-xl">
+          <p class="ab">
+            종합반 학생은 지정된 시간에 반드시 등원해야 합니다. 결석·지각·조퇴 시 반드시 사전에 카카오채널 '정율사관학원'으로 연락해야 합니다.
+            <ul>
+              <li>무단 결석: 벌점 5점 부과</li>
+              <li>지각(10분 초과): 벌점 3점 부과</li>
+              <li>월 3회 이상 결석 시 보호자 연락</li>
+              <li>출결 패드 2개(학원+자습관) 모두 입력 필수</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span class="qn">③</span>
+          <span class="qt">외출증 제출</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a-xl">
+          <p class="ab">
+            수업 중 외출이 필요한 경우 반드시 <b>외출증</b>을 작성하여 제출해야 합니다.
+            <ul>
+              <li>외출증은 6층 안내 데스크에서 수령</li>
+              <li>보호자 서명 + PM(담임 강사) 서명 필수</li>
+              <li>단기 외출: 외출 예정일 1일 전 제출</li>
+              <li>정기 외출: 정해진 기간 내 제출</li>
+              <li>외출증 없는 외출 = 무단 외출로 벌점 5점</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span class="qn">④</span>
+          <span class="qt">보강 규정</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a-xl">
+          <p class="ab">
+            결석한 수업에 대한 보강은 아래 기준에 따릅니다.
+            <ul>
+              <li>공결(공식 결석): 보강 신청 가능. 결석일로부터 2주 이내 신청</li>
+              <li>사결(사적 결석): 보강 인정 여부는 담당 강사 재량</li>
+              <li>보강은 담당 강사와 협의 후 지정된 날짜에 진행</li>
+              <li>무단 결석은 보강 신청 불가</li>
+              <li>보강 미신청 시 해당 수업은 소멸됩니다</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span class="qn">⑤</span>
+          <span class="qt">휴원 및 퇴원</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a-xl">
+          <p class="ab">
+            <b>휴원</b> 및 <b>퇴원</b>은 반드시 서면으로 신청해야 합니다.
+            <ul>
+              <li>휴원: 최장 1개월, 1회에 한해 가능. 학기 중 휴원 시 환불 규정 적용</li>
+              <li>퇴원 신청: 퇴원 예정일 7일 전까지 안내 데스크에 서면 제출</li>
+              <li>퇴원 처리 완료 후 잔여 수강료 환불 (환불 규정 참고)</li>
+              <li>미신청 퇴원(무단 퇴원)의 경우 환불이 불가할 수 있습니다</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span class="qn">⑥</span>
+          <span class="qt">강제퇴원 규정</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a-xl">
+          <p class="ab">
+            아래 항목 해당 시 <b>즉시 강제퇴원</b> 처리됩니다. 이 경우 잔여 수강료는 환불 규정에 따라 처리됩니다.
+            <ul>
+              <li>대리 출석 (본인·대리인 모두)</li>
+              <li>타인 학습을 반복적으로 방해하는 행위</li>
+              <li>학원 시설·기자재 고의 파손</li>
+              <li>강사·직원·학생에 대한 폭언·폭행</li>
+              <li>월 누적 벌점 30점 이상</li>
+              <li>기타 학원 운영에 중대한 지장을 주는 행위</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────── 15. 환불규정 ─────── -->
+<section class="sec faq-light" style="background: var(--ink-50);">
+  <div style="max-width: 760px; margin: 0 auto; padding: 0 24px;">
+    <span class="eyebrow reveal">15 · 환불규정</span>
+    <h2 style="font-family: var(--font-heading); font-size: clamp(24px,3vw,38px); font-weight: 900; color: var(--navy); margin-bottom: 40px; line-height: 1.3;" class="reveal d1">환불규정 — <em>반드시 확인</em>하세요.</h2>
+
+    <div class="faq-list reveal d2">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span class="qn">①</span>
+          <span class="qt">수업 개시일 이전 취소</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a"><p class="ab">수강 등록 후 수업 시작일 <b>이전에</b> 취소하는 경우 <b>납부한 수강료 전액을 환불</b>합니다. (등록비·교재비 별도)</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span class="qn">②</span>
+          <span class="qt">수업 개시 후 1/3 경과 전</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a"><p class="ab">수업 시작 후 총 수강 기간의 <b>1/3이 경과하기 전</b>에 환불 요청 시 납부 금액의 <b>2/3를 환불</b>합니다.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span class="qn">③</span>
+          <span class="qt">수업 개시 후 1/2 경과 전</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a"><p class="ab">수업 시작 후 총 수강 기간의 <b>1/2이 경과하기 전</b>에 환불 요청 시 납부 금액의 <b>1/2를 환불</b>합니다.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span class="qn">④</span>
+          <span class="qt">수업 개시 후 1/2 이상 경과</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a"><p class="ab">수업 시작 후 총 수강 기간의 <b>1/2 이상이 경과</b>한 경우 환불이 <b>불가</b>합니다. (「학원법」 시행령 제18조 기준)</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span class="qn">⑤</span>
+          <span class="qt">교재비 환불</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a"><p class="ab">교재를 미사용·미개봉 상태로 반납하면 환불이 가능합니다. <b>개봉하거나 사용한 교재는 환불이 불가</b>합니다.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span class="qn">⑥</span>
+          <span class="qt">등록비 환불</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a"><p class="ab">입학 시 납부한 <b>등록비(입학금)는 환불되지 않습니다.</b> 단, 학원 귀책 사유로 인한 개강 불가 시 전액 환불합니다.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span class="qn">⑦</span>
+          <span class="qt">강제퇴원 시 환불</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a"><p class="ab">강제퇴원 처리 시 잔여 수강 기간에 해당하는 수강료를 위 환불 기준에 따라 처리합니다. 단, <b>시설 파손 등 손해 발생 시 손해액을 차감</b>할 수 있습니다.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span class="qn">⑧</span>
+          <span class="qt">환불 처리 기간</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a"><p class="ab">환불 신청 후 <b>7영업일 이내</b>에 지정 계좌로 입금됩니다. 환불 신청은 안내 데스크 방문 또는 서면 접수로만 가능합니다.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────── 16. 종합반 특별 혜택 ─────── -->
+<section class="sec" id="benefits" style="background: var(--navy);">
+  <div class="container">
+    <div class="sec-head light reveal" style="text-align: center;">
+      <span class="eyebrow">16 · 종합반 수강 특별 혜택</span>
+      <h2 style="color: var(--white);">종합반 학생에게만 드리는 <em>9가지 혜택</em></h2>
+    </div>
+
+    <div class="benefit-grid" data-stagger>
+      <div class="benefit-card">
+        <div class="benefit-icon">📷</div>
+        <h4>구루미 가입비 지원</h4>
+        <p>구루미 캠스터디 최초 가입비(15,000원) 지원. 순공시간을 무료로 시작하세요.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">📊</div>
+        <h4>자습관 체계 관리</h4>
+        <p>30분 단위 학습 상태를 점검·기록합니다. 사감이 매일 상주하며 자습 태도와 집중도를 직접 관리합니다.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🪑</div>
+        <h4>개인 지정 좌석</h4>
+        <p>자습관 내 개인 지정 좌석이 배정됩니다. 매일 같은 자리에서 학습 루틴을 만드세요.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">👨‍🏫</div>
+        <h4>PM 1:1 관리</h4>
+        <p>담당 PM(Project Mentor) 강사가 매주 학습 진도·과제·태도를 직접 점검합니다.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">💰</div>
+        <h4>할인 혜택</h4>
+        <p>종합반 수강생 전용 다과목 수강 할인 및 특강 우선 수강 혜택이 제공됩니다.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">☕</div>
+        <h4>크로켓 포인트</h4>
+        <p>4층 북카페 크로켓에서 사용 가능한 포인트를 매월 지급합니다. 공부하며 충전하세요.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">👨‍👩‍👧</div>
+        <h4>학부모 설명회 · 교육</h4>
+        <p>정기 학부모 설명회에 우선 참여 기회가 주어집니다. 자녀의 학습 현황을 공유받으세요.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">📚</div>
+        <h4>튜터링룸 · 북카페 이용</h4>
+        <p>4층 튜터링 공간과 북카페 크로켓을 우선 이용할 수 있습니다.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🌙</div>
+        <h4>야간자습 연장</h4>
+        <p>신청 시 야간자습 시간을 연장할 수 있습니다. 수능 전 집중 관리 기간에 최대로 활용하세요.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────── CTA ─────── -->
+<section class="sec cta-section" id="consult">
+  <div class="container">
+    <div class="cta-inner reveal scale-in">
+      <div class="cta-badge">지금 바로 상담 가능</div>
+      <h2>궁금한 점이 있으신가요?<br><em>전화 한 통이면 됩니다.</em></h2>
+      <p>수강 과목·시간표·자습관 이용·비용 — 모든 궁금증을 상담에서 해결해드립니다.<br>신입상담은 보호자와 함께 방문하세요.</p>
+      <div class="cta-btns">
+        <a href="tel:032-321-9937" class="cta-btn-primary">전화 상담하기 · 032-321-9937 <span class="arr">→</span></a>
+      </div>
+      <div class="cta-hours">상담 가능 시간 · 평일 09:00 – 21:00 · 주말 09:00 – 18:00</div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────── FOOTER ─────── -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-info">
+      <div>
+        <div class="ft-brand">정율사관학원</div>
+        <p>JUNGYOUL · DISCOVERING THE CORE OF LEARNING<br>종합반 신입생 OT & 수강규정 안내</p>
+      </div>
+      <div>
+        <h6>문의</h6>
+        <ul>
+          <li>☎ 032-321-9937</li>
+          <li>카카오채널 · 정율사관학원</li>
+          <li>비잔티움 6층 안내 데스크</li>
+        </ul>
+      </div>
+      <div>
+        <h6>목차</h6>
+        <ul>
+          <li><a href="#guide">신입생 안내</a></li>
+          <li><a href="#schedule">자습관 이용 안내</a></li>
+          <li><a href="#apps">필수 앱</a></li>
+          <li><a href="#rules">수강규정</a></li>
+          <li><a href="#benefits">종합반 혜택</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-base">© 2026 JUNGYOUL ACADEMY · ALL RIGHTS RESERVED · 정율사관학원 종합반</div>
+  </div>
+</footer>
+
+<!-- ─────── STICKY BAR ─────── -->
+<div class="stickybar" id="stickybar">
+  <div class="stickybar-info">
+    <b>정율사관학원 종합반</b><br>
+    <span>신입상담 예약 · 지금 바로 연락하세요</span>
+  </div>
+  <a href="tel:032-321-9937" class="stickybar-btn">전화 상담 →</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
