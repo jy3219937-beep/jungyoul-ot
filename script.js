@@ -83,7 +83,41 @@ document.querySelectorAll('.faq-q').forEach((btn) => {
   update();
 })();
 
-// 6) 내비게이션 스크롤 반응 (배경 강화)
+// 6) 강의실 배치표 — 가로 스크롤 표시 (페이드 · 화살표 · 스와이프 안내)
+(function chartScroll() {
+  document.querySelectorAll('.chart-viewport').forEach((vp) => {
+    const box = vp.querySelector('.chart-scroll');
+    if (!box) return;
+
+    function sync() {
+      const max = box.scrollWidth - box.clientWidth;
+      vp.classList.toggle('is-scrollable', max > 4);
+      vp.classList.toggle('is-start', box.scrollLeft <= 2);
+      vp.classList.toggle('is-end', box.scrollLeft >= max - 2);
+      if (box.scrollLeft > 12) vp.classList.add('has-scrolled');
+    }
+
+    box.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    // 이미지는 lazy 로딩이므로 로드 후 폭이 확정됨
+    vp.querySelectorAll('img').forEach((img) => {
+      if (img.complete) return;
+      img.addEventListener('load', sync);
+    });
+
+    vp.querySelectorAll('.chart-nav').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const dir = btn.classList.contains('chart-nav-prev') ? -1 : 1;
+        vp.classList.add('has-scrolled');
+        box.scrollBy({ left: dir * box.clientWidth * 0.7, behavior: 'smooth' });
+      });
+    });
+
+    sync();
+  });
+})();
+
+// 7) 내비게이션 스크롤 반응 (배경 강화)
 (function navScroll() {
   const nav = document.getElementById('nav');
   if (!nav) return;
