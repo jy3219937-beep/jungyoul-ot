@@ -496,7 +496,7 @@ body {
   transition: filter .2s;
 }
 .kakao-btn:hover { filter: brightness(.96); }
-.kakao-btn .kb-mark {
+.kb-mark {
   flex-shrink: 0;
   width: 34px;
   height: 34px;
@@ -510,7 +510,7 @@ body {
   text-align: center;
   letter-spacing: -.02em;
 }
-.kakao-btn .kb-t {
+.kb-t {
   flex: 1;
   min-width: 0;
   font-size: 14.5px;
@@ -518,7 +518,7 @@ body {
   color: #3c1e1e;
   line-height: 1.35;
 }
-.kakao-btn .kb-t em {
+.kb-t em {
   display: block;
   font-style: normal;
   font-size: 11.5px;
@@ -526,31 +526,8 @@ body {
   color: rgba(60, 30, 30, .68);
   margin-top: 2px;
 }
-.kakao-btn .kb-arr { flex-shrink: 0; font-size: 15px; font-weight: 700; color: #3c1e1e; }
+.kb-arr { flex-shrink: 0; font-size: 15px; font-weight: 700; color: #3c1e1e; }
 
-/* QR — 다른 기기로 스캔할 때 */
-.kakao-qr-row {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-top: 12px;
-  background: var(--ink-50);
-  border: 1px solid var(--ink-100);
-  border-radius: 12px;
-  padding: 12px 14px;
-}
-.kakao-qr {
-  flex-shrink: 0;
-  display: block;
-  background: #fff;
-  border: 1px solid var(--ink-100);
-  border-radius: 8px;
-  padding: 5px;
-}
-/* 스캔 여유를 위해 QR 자체를 112px로 고정 (모듈당 ≈2.5px) */
-.kakao-qr img { display: block; width: 112px; height: 112px; }
-.kakao-qr-t { font-size: 12px; line-height: 1.65; color: var(--ink-600); }
-.kakao-qr-t b { display: block; font-size: 13px; color: var(--navy); margin-bottom: 3px; }
 
 /* ══════════ 필수 앱 — 아이콘 리스트형 ══════════ */
 .app-grid {
@@ -629,6 +606,42 @@ body {
   position: relative;
 }
 .rent-list li::before { content: '·'; position: absolute; left: 0; color: var(--gold); }
+
+/* 보증금 송금내역 첨부 필수 안내 */
+.rent-warn {
+  margin-top: 12px;
+  background: rgba(231, 76, 60, .05);
+  border: 1px solid rgba(231, 76, 60, .28);
+  border-left: 3px solid #e74c3c;
+  border-radius: 10px;
+  padding: 15px 16px;
+}
+.rent-warn .rw-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: #c0392b;
+  line-height: 1.5;
+  margin-bottom: 9px;
+}
+.rent-warn p { font-size: 13px; line-height: 1.75; color: var(--ink-700); }
+.rent-warn p b { color: var(--navy); font-weight: 700; }
+.rent-warn .rw-strong {
+  margin-top: 7px;
+  padding-top: 7px;
+  border-top: 1px dashed rgba(231, 76, 60, .3);
+}
+.rent-warn .rw-strong b { color: #c0392b; font-weight: 800; }
+/* 카카오 버튼 재사용 */
+.rw-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  background: #fee500;
+  border-radius: 12px;
+  padding: 11px 14px;
+}
+.rw-btn .kb-t { font-size: 13.5px; }
 
 /* ══════════ 상벌점 표 ══════════ */
 .deduct-grid-2col { grid-template-columns: 1fr !important; }
