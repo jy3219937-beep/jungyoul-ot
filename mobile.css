@@ -483,6 +483,75 @@ body {
 .ref-light img { max-width: 100%; }
 .ref-light figcaption { font-size: 11.5px; line-height: 1.6; }
 
+/* ══════════ 카카오채널 추가 ══════════ */
+/* 폰에서는 자기 화면의 QR을 스캔할 수 없으므로 탭 버튼을 주 동작으로 */
+.kakao-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  background: #fee500;
+  border-radius: 12px;
+  padding: 13px 16px;
+  transition: filter .2s;
+}
+.kakao-btn:hover { filter: brightness(.96); }
+.kakao-btn .kb-mark {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #3c1e1e;
+  color: #fee500;
+  font-family: var(--font-heading);
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 34px;
+  text-align: center;
+  letter-spacing: -.02em;
+}
+.kakao-btn .kb-t {
+  flex: 1;
+  min-width: 0;
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #3c1e1e;
+  line-height: 1.35;
+}
+.kakao-btn .kb-t em {
+  display: block;
+  font-style: normal;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: rgba(60, 30, 30, .68);
+  margin-top: 2px;
+}
+.kakao-btn .kb-arr { flex-shrink: 0; font-size: 15px; font-weight: 700; color: #3c1e1e; }
+
+/* QR — 다른 기기로 스캔할 때 */
+.kakao-qr-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 12px;
+  background: var(--ink-50);
+  border: 1px solid var(--ink-100);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+.kakao-qr {
+  flex-shrink: 0;
+  display: block;
+  background: #fff;
+  border: 1px solid var(--ink-100);
+  border-radius: 8px;
+  padding: 5px;
+}
+/* 스캔 여유를 위해 QR 자체를 112px로 고정 (모듈당 ≈2.5px) */
+.kakao-qr img { display: block; width: 112px; height: 112px; }
+.kakao-qr-t { font-size: 12px; line-height: 1.65; color: var(--ink-600); }
+.kakao-qr-t b { display: block; font-size: 13px; color: var(--navy); margin-bottom: 3px; }
+
 /* ══════════ 필수 앱 — 아이콘 리스트형 ══════════ */
 .app-grid {
   grid-template-columns: 1fr;
